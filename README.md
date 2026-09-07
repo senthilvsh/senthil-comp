@@ -18,4 +18,10 @@ The core components of this project include:
 I have no grand illusions of developing the next big architecture or the successor to any real-world operating system. 
 This project is simply to explore my curiosities in a field I really like.
 
+## Documentation
+
+For more information read the [project documentation](https://senthilvsh.github.io/senthil-comp).
+
+## License
+
 This project is [licensed](LICENSE) under the MIT license.

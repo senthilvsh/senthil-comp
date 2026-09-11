@@ -1,0 +1,26 @@
+load_di		- load 32-bit data from mem to reg - direct address mode
+load_in		- load 32-bit data from mem to red - register-indirect address mode
+store_di	- store 32-bit data from reg to mem - direct address mode
+store_in	- store 32-bit data from reg to mem - register-indirect address mode
+load.b_di	- load 8-bit data from mem to reg and zero extend it - direct address mode
+load.b_in	- load 8-bit data from mem to red and zero extend it - register-indirect address mode
+load.bs_di	- load 8-bit data from mem to reg and sign extend it - direct address mode
+load.bs_in	- load 8-bit data from mem to red and sign extend it - register-indirect address mode
+store.b_di	- store 8-bit data from reg to mem - direct address mode
+store.b_in	- store 8-bit data from reg to mem - register-indirect address mode
+move		- move data from one reg to another
+set			- set the value of a reg to a 32-bit constant
+
+add			- add two 32-bit values
+sub			- subtract two 32-bit values
+mul			- multiply two 32-bit unsigned values
+smul		- multiply two 32-bit signed values
+div			- divide two 32-bit unsigned values
+sdiv		- divide two 32-bit signed values
+mul.b		- multiply two 8-bit unsigned values
+div.b		- divide two 8-bit unsigned values
+smul.b		- multiply two 8-bit signed values
+sdiv.b		- divide two 8-bit signed values
+mod			- find modulo of two 32-bit unsigned values
+
+

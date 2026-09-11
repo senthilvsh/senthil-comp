@@ -23,8 +23,8 @@
 <main>
     <section>
         <p>
-            <strong>svm32</strong> (<em>pronounced as <strong>"swim 32"</strong></em>) is a highly experimental, 
-            fun-filled, hobby project—where I attempt to build a complete 32-bit computing platform from scratch!
+            <strong>svm32</strong> (<em>pronounced <strong>'swim 32'</strong></em>) is a highly experimental, 
+            fun-filled, hobby project where I attempt to build a complete 32-bit computing platform from scratch!
         </p>
 
         <p>
@@ -38,27 +38,44 @@
         <h2>The Plan</h2>
         <p>
             I plan to develop a <strong>32-bit instruction set architecture</strong>, implement a 
-            <strong>virtual machine</strong>, create an <strong>assembly language</strong>,
-            write an <strong>assembler</strong> for it, and write a <strong>basic runtime</strong>
-            that programs can use.
+            <strong>virtual machine</strong>, create an <strong>assembly language</strong>, and
+            write an <strong>assembler</strong> for it.
         </p>
 
         <p>
-            At this point, the system should be mature enough to require a <strong>hardware-interrupt</strong>
-            capability to handle keyboard input and a <strong>80x24 character display</strong> for output.
+            I don't plan to create a complete and comprehensive ISA at first. I will start out with just the 
+            loading, storing, and arithmetic instructions. Then I will write some assembly programs to push the 
+            capability of the system. When I hit a wall, I will enhance the ISA and continue. In this way, the ISA will 
+            evolve based on the programmer's requirements rather than being the product of a top-down design.
         </p>
 
         <p>
-            Then I will try to create a simple <strong>high-level language</strong> and write a 
+            At this point, the system will require a <strong>hardware interrupt</strong> capability for I/O.
+            Up until now, I will have dumped the content of the registers and memory to see what happened. 
+            But now is a good time to provide an <strong>80x24 character display</strong> for output, which
+            I will emulate using the native windowing library of the host OS.
+            I will also add <strong>keyboard input</strong> capability.
+        </p>
+
+        <p>
+            I will package the I/O code along with other utility functions into a nice <strong>runtime library</strong>,
+            which can be used by other programs. This is a good time to provide a <strong>linker</strong> that can
+            build multiple object files into a single executable.
+        </p>
+
+        <p>
+            The next step is to create a simple <strong>high-level language</strong> and write a 
             <strong>compiler</strong> for it. This language will be a completely stripped-down version
             of C, with slight syntax modifications to make it easier to write the compiler.
+            Technically this will be a statically typed language. But at first I won't enforce type checking and allow 
+            the program to crash and burn if it wants to. Later on I may try to implement compile-time type checking.
         </p>
 
         <p>
-            After that, if I have the time, skill and any patience left, I will try to experiment with a 
+            After that, if I have the time, skill, and patience left, I will try to experiment with a 
             rudimentary <strong>file system</strong>, a <strong>single-tasking OS kernel</strong>, 
             and some basic <strong>system calls</strong>. Things like <strong>virtual memory</strong> 
-            and <strong>multi-tasking</strong> are quite far away, but worth a mention here.
+            and <strong>multi-tasking</strong> are quite far away, but worth mentioning here.
         </p>
     </section>
     
@@ -66,7 +83,7 @@
         <h2>The Journey Ahead</h2>
         <p>
             Let's be honest. A project of this scale is going to be a messy, chaotic ride.
-            I fully expect to run face-first into architectural dead-ends, wrestle with infuriating bugs,
+            I fully expect to run face-first into architectural dead ends, wrestle with infuriating bugs,
             and make plenty of boneheaded design choices. There will be setbacks and things <em>will</em> break.
         </p>
 
@@ -78,7 +95,7 @@
         
         <p>
             Whether this project ultimately succeeds, fizzles out, or fails spectacularly, the sheer joy of learning
-            on the bare metal makes every roadblock and dead-end entirely worth it.
+            on the bare metal makes every roadblock and dead end entirely worth it.
         </p>
     </section>
 </main>

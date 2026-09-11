@@ -18,3 +18,17 @@ p {
 li {
 	margin-block: 1em;
 }
+
+pre {
+	padding: 1em;
+	background-color: #eee;
+}
+
+table {
+	border: solid 1px #aaa;
+	border-collapse: collapse;
+}
+td {
+	border: solid 1px #aaa;
+	padding: 0.25em;
+}

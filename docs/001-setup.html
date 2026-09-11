@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>svm32 - About Senthil Kumar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+	<strong>svm32</strong> |
+	<a href="index.html">Home</a>
+</nav>
+
+<hr>
+
+<header>
+    <h1>Development Setup</h1>
+</header>
+
+<main>
+    <section>
+        <p>
+            I have chosen a Linux-based system as both the development and runtime environment for this project.
+            So either a native or WSL2 based Linux distro is needed for a seamless developer experience.
+        </p>
+    
+        <p>
+            You could get it work on macOS initially using a typical Xcode Command Line Tools setup,
+            but in the near future when the project starts using an X11 window for I/O, you may have to do additional setup.
+        </p>
+        <p>
+            Running natively on Windows is possible. You have to either use the correct MSYS2/MinGW setup to 
+            build the project (hard!) or maintain your own version of code that uses Win32 API (harder!).
+            I think most people will be better off using WSL2.
+        </p>
+    </section>
+
+    <section>
+        <p>
+            This is my setup. If you are unfamiliar with the tech stack, you can simply follow this.
+        </p>
+        <table>
+            <tr>
+                <td>Language</td>
+                <td>C (C11 Standard)</td>
+            </tr>
+            <tr>
+                <td>Compiler</td>
+                <td>gcc 15.2.0</td>
+            </tr>
+            <tr>
+                <td>Build</td>
+                <td>GNU Make 4.4.1</td>
+            </tr>
+            <tr>
+                <td>Environment</td>
+                <td><a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL2 (Ubuntu)</a> on Windows 10 Home 22H2</td>
+            </tr>
+            <tr>
+                <td>IDE</td>
+                <td>VSCodium</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Environment Quick Start</h2>
+        <p>
+            If you are on WSL2 (Ubuntu), run the following commands in your terminal to update your system, 
+            install the core C development toolchain, and configure the necessary X11 libraries:
+        </p>
+
+<pre><code># 1. Update your local package index
+sudo apt update
+
+# 2. Install the standard C/C++ compiler toolchain (GCC & Make)
+sudo apt install build-essential -y
+
+# 3. Install the X11 development headers for upcoming graphical features
+sudo apt install libx11-dev -y
+
+# 4. Verify your environment is functional
+gcc --version
+make --version</code></pre>
+
+    </section>
+</main>
+
+<hr>
+
+<footer>
+    © 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
+</footer>
+
+</body>
+</html>

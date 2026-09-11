@@ -4,110 +4,75 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>svm32 - A complete 32-bit computing platform</title>
-    <link rel="stylesheet" href="style.css">
+    <title>svm32 - Build a complete 32-bit computer from scratch!</title>
 </head>
 
-<body>
+<body style="max-width: 800px">
 
-<nav>
-	<strong>svm32</strong>
-</nav>
+    <nav>
+        <a href="index.html">svm32</a> |
+        <a href="index.html">source</a> |
+        <a href="index.html">about</a>
+    </nav>
 
-<hr>
+    <hr>
 
-<header>
-    <h1>A complete 32-bit computing platform</h1>
-</header>
-
-<main>
-    <section>
-        <p>
-            <strong>svm32</strong> (<em>pronounced <strong>'swim 32'</strong></em>) is a highly experimental, 
-            fun-filled, hobby project where I attempt to build a complete 32-bit computing platform from scratch!
-        </p>
+    <main>
+        <h1>Build a complete 32-bit computer from scratch!</h1>
 
         <p>
-            I have always been fascinated by computer architecture, assembly programming, compilers, and operating 
-            system concepts. In my full-time job, I mostly develop enterprise applications, working on top of a 
-            dozen layers of abstraction. But these foundational components of computing have always kindled my curiosity.
-        </p>
-    </section>
-
-    <section>
-        <h2>The Plan</h2>
-        <p>
-            I plan to develop a <strong>32-bit instruction set architecture</strong>, implement a 
-            <strong>virtual machine</strong>, create an <strong>assembly language</strong>, and
-            write an <strong>assembler</strong> for it.
+            <strong>svm32</strong> (pronounced '<strong>swim 32</strong>') is a highly explorative, 
+            fun-filled journey to build a complete 32-bit computer from scratch.
         </p>
 
-        <p>
-            I don't plan to create a complete and comprehensive ISA at first. I will start out with just the 
-            loading, storing, and arithmetic instructions. Then, I will write some assembly programs to push the
-            capability of the system. When I hit a wall, I will enhance the ISA and continue. In this way, the ISA will 
-            evolve based on the programmer's requirements rather than being the product of a top-down design.
-        </p>
+        <ol>
+            <li><a href="">An 8-bit computer design</a></li>
+            <li><a href="">An adding machine</a></li>
+            <li><a href="">More math operations</a></li>
+        </ol>
 
-        <p>
-            At this point, the system will require a <strong>hardware interrupt</strong> capability for I/O.
-            Up until now, I will have dumped the content of the registers and memory to see what happened. 
-            But now is a good time to provide an <strong>80x24 character display</strong> for output, which
-            I will emulate using a standard windowing library. I will also add <strong>keyboard input</strong> capability.
-        </p>
+<pre>
+       +---+---+---+---+---+---+---+---+---------------+
+Bits   | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | <-- Positions
+       +---+---+---+---+---+---+---+---+---------------+
+Binary | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | <-- Bit Values
+       +---+---+---+---+---+---+---+---+---------------+
+         ^                               ^
 
-        <p>
-            I will package the I/O code along with other utility functions into a nice <strong>runtime library</strong>,
-            which can be used by other programs. This is a good time to provide a <strong>linker</strong> that can
-            take multiple object files and build them into a single executable file.
-        </p>
+         |                               |
+     MSB (Most                       LSB (Least
+  Significant Bit)                Significant Bit)
+</pre>
 
-        <p>
-            The next step is to create a simple <strong>high-level language</strong> and write a 
-            <strong>compiler</strong> for it. Technically this will be a <strong>statically-typed</strong> language.
-            But at first, I won't enforce type checking and will allow the program to crash and burn if it wants to.
-            Later on, I may try to implement compile-time type checking.
-        </p>
+<p>Memory layout</p>
+<pre>
+    +---------------------------+  High Addresses (0xFFFFFFFF)
+    |      Kernel Space         |
+    +---------------------------+
+    |                           |
+    |     Stack (Grows down)    |
+    |             |             |
+    |             v             |
+    |                           |
+    |             ^             |
+    |             |             |
+    |     Heap  (Grows up)      |
+    |                           |
+    +---------------------------+
+    |  Uninitialized Data (BSS) |
+    +---------------------------+
+    |   Initialized Data (.data)|
+    +---------------------------+
+    |   Text / Program (.text)  |
+    +---------------------------+  Low Addresses  (0x00000000)
+</pre>
+    </main>
 
-        <p>
-            After that, if I have the time, skill, and patience left, I will try to experiment with a rudimentary
-            <strong>file system</strong>, a <strong>single-tasking OS kernel</strong>, and some basic
-            <strong>system calls</strong>. Things like <strong>virtual memory</strong> and <strong>multi-tasking</strong>
-            are quite far away, but worth mentioning here.
-        </p>
-    </section>
-    
-    <section>
-        <h2>The Journey Ahead</h2>
-        <p>
-            Let's be honest. A project of this scale is going to be a messy, chaotic ride.
-            I fully expect to run face-first into architectural dead ends, wrestle with infuriating bugs,
-            and make plenty of boneheaded design choices. There will be setbacks and things <em>will</em> break.
-        </p>
+    <hr>
 
-        <p>
-            But getting past all of those challenges and making the system work is where the ultimate payoff 
-            and satisfaction come from. I plan to document every single step of this journey right here—the
-            breakthroughs, the false starts, and the moments when everything crashes in a ball of virtual smoke.
-        </p>
-        
-        <p>
-            Whether this project ultimately succeeds, fizzles out, or fails spectacularly, the sheer joy of learning
-            on the bare metal makes every roadblock and dead end entirely worth it.
-        </p>
-    </section>
-
-    <section>
-        <h2>Let us begin...</h2>
-        <p><a href="001-setup.html">Development Setup</a></p>
-    </section>
-</main>
-
-<hr>
-
-<footer>
-    © 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
-</footer>
+    <footer>
+        © 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
+    </footer>
 
 </body>
 

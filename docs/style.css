@@ -1,0 +1,14 @@
+body {
+	max-width: 800px;
+	margin-inline: auto;
+	padding: 0 1rem;
+	font-size: 14pt;
+}
+
+pre {
+	overflow-x: auto;
+}
+
+p {
+	line-height: 1.25em;
+}

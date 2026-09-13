@@ -2,77 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>svm32 - Build a complete 32-bit computer from scratch!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">	<title>Build a complete 32-bit computer from scratch | svm32</title>
+	<link rel="stylesheet" href="style.css"></link>
 </head>
 
-<body style="max-width: 800px">
+<body>
 
-    <nav>
-        <a href="index.html">svm32</a> |
-        <a href="index.html">source</a> |
-        <a href="index.html">about</a>
-    </nav>
+	<nav>
+		<a href="index.html">svm32</a>
+	</nav>
 
-    <hr>
+	<hr>
 
-    <main>
-        <h1>Build a complete 32-bit computer from scratch!</h1>
+	<main>
+		<h1>Build a complete 32-bit computer from scratch!</h1>
 
-        <p>
-            <strong>svm32</strong> (pronounced '<strong>swim 32</strong>') is a highly explorative, 
-            fun-filled journey to build a complete 32-bit computer from scratch.
-        </p>
+		<p>
+			<strong>svm32</strong> (pronounced '<strong>swim 32</strong>') is a <em>highly explorative, 
+			fun-filled</em> journey to build a complete 32-bit computer from scratch.
+			We will design an Instruction Set Architecture, implement a Virtual Machine that can
+			execute it, write programs for this platform, then continue to build upwards layer by layer,
+			and see how far we can go.
+		</p>
+	</main>
 
-        <ol>
-            <li><a href="">An 8-bit computer design</a></li>
-            <li><a href="">An adding machine</a></li>
-            <li><a href="">More math operations</a></li>
-        </ol>
+	<hr>
 
-<pre>
-       +---+---+---+---+---+---+---+---+---------------+
-Bits   | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | <-- Positions
-       +---+---+---+---+---+---+---+---+---------------+
-Binary | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | <-- Bit Values
-       +---+---+---+---+---+---+---+---+---------------+
-         ^                               ^
-
-         |                               |
-     MSB (Most                       LSB (Least
-  Significant Bit)                Significant Bit)
-</pre>
-
-<p>Memory layout</p>
-<pre>
-    +---------------------------+  High Addresses (0xFFFFFFFF)
-    |      Kernel Space         |
-    +---------------------------+
-    |                           |
-    |     Stack (Grows down)    |
-    |             |             |
-    |             v             |
-    |                           |
-    |             ^             |
-    |             |             |
-    |     Heap  (Grows up)      |
-    |                           |
-    +---------------------------+
-    |  Uninitialized Data (BSS) |
-    +---------------------------+
-    |   Initialized Data (.data)|
-    +---------------------------+
-    |   Text / Program (.text)  |
-    +---------------------------+  Low Addresses  (0x00000000)
-</pre>
-    </main>
-
-    <hr>
-
-    <footer>
-        © 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
-    </footer>
+	<footer>
+		© 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
+	</footer>
 
 </body>
 

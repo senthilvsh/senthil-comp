@@ -20,14 +20,20 @@
 	<main>
 		<h1>Source</h1>
 		
-		<p>You need a Linux system (native or WSL2). Other *nix environments could work, with some tweaks.</p>
+		<p>You need a Linux system (native or WSL2) to build/run this project. Other *nix environments could work, with some tweaks.</p>
 
-		<h2>1. Clone Repo</h2>
-		<pre><code>git clone https://github.com/senthilvsh/senthil-comp.git</code></pre>
-
-		<h2>2. Install Toolchain</h2>
-		<pre><code>sudo apt update &amp;&amp; sudo apt install -y build-essential libx11-dev</code></pre>
+		<h2>1. Install Toolchain</h2>
+		<pre><code>$ sudo apt update &amp;&amp; sudo apt install -y build-essential libx11-dev</code></pre>
 		<p>...or follow equivalent steps for your environment</p>
+		
+		<h2>2. Clone Repo</h2>
+		<pre><code>$ git clone https://github.com/senthilvsh/senthil-comp.git</code></pre>
+
+		<h2>3. Build</h2>
+		<pre><code>$ make</code></pre>
+		
+		<h2>4. Run</h2>
+		<pre><code>$ ./vm</code></pre>
 	</main>
 
 	<hr>

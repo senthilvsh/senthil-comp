@@ -8,6 +8,14 @@ body {
 	font-family: 'Noto Serif', serif;
 }
 
+h1 {
+	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 1.1em;
+}
+
 pre {
 	overflow-x: auto;
 	background-color: #eee;
@@ -16,7 +24,7 @@ pre {
 
 code {
 	font-family: 'Noto Sans Mono';
-	font-size: 12pt;
+	font-size: 11pt;
 }
 
 p {

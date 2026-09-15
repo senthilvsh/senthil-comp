@@ -1,42 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Tinos&family=Noto+Serif&family=Noto+Sans+Mono&display=swap');
-
 body {
-	background-color: #fff;
 	max-width: 800px;
 	margin-inline: auto;
 	padding: 0 1em;
-	font-size: 12pt;
-	font-family: 'Noto Serif', serif;
-}
-
-header {
-	text-align: center;
-}
-
-p.brand {
-	font-size: 1.5em;
-	font-weight: bold;
-	line-height: 1em;
-	margin: 1em 0 0.5em 0;
-}
-
-p.tagline {
-	font-style: italic;
-}
-
-nav {
-	margin: 1.5em;
-}
-
-header {
-	border-bottom: solid 1px #aaa;
-}
-h1 {
-	font-size: 1.6em;
-}
-
-h2 {
-	font-size: 1.1em;
+	font-size: 14pt;
 }
 
 pre {
@@ -45,23 +11,14 @@ pre {
 	padding: 1em;
 }
 
-code {
-	font-family: 'Noto Sans Mono';
-	font-size: 11pt;
-}
-
-p {
-	line-height: 1.5em;
-}
-
-li {
-	margin: 0.5em 0;
-}
-
 table {
 	border-collapse: collapse;
 }
 
 td {
 	padding: 0.25em;
+}
+
+h2 {
+	font-size: 1.0em;
 }

@@ -1,11 +1,8 @@
 ﻿# Senthil-VM
 
-_I try to build a virtual machine and then program it, to explore computer science concepts._
+_Building and programming a virtual machine from scratch to explore foundational computer science concepts._
 
-## Documentation
-
-For more information read the [project documentation](https://senthilvsh.github.io/senthil-comp).
-
-## License
+This repository tracks my progress as I build this VM. I am documenting the entire journey on 
+[my blog](https://senthilvsh.github.io/senthil-comp)—read along to explore the concepts with me!
 
 This project is [licensed](LICENSE) under the MIT license.

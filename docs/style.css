@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Sans+Mono&display=swap');
+
 body {
 	max-width: 800px;
 	margin-inline: auto;
-	padding: 0 1rem;
-	font-size: 14pt;
+	padding: 0 1em;
+	font-size: 12pt;
+	font-family: 'Noto Serif', serif;
 }
 
 pre {
 	overflow-x: auto;
+	background-color: #eee;
+	padding: 1em;
+}
+
+code {
+	font-family: 'Noto Sans Mono';
+	font-size: 12pt;
 }
 
 p {
-	line-height: 1.25em;
+	line-height: 1.5em;
+}
+
+li {
+	margin: 0.5em 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding: 0.25em;
 }

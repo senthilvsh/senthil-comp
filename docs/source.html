@@ -4,56 +4,30 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<title>Getting the source code and building | svm32</title>
+	<title>Developer Setup | Senthil-VM</title>
+	<link rel="stylesheet" href="style.css"></link>
 </head>
 
-<body style="max-width: 800px">
-
+<body>
 	<nav>
-		<a href="index.html">svm32</a>
+		<strong>Senthil-VM</strong> |
+		<a href="index.html">Home</a> |
+		<a href="source.html">Source</a>
 	</nav>
 
 	<hr>
 
 	<main>
-		<h1>Development Setup</h1>
+		<h1>Source</h1>
 		
-		<h2></h2>
+		<p>You need a Linux system (native or WSL2). Other *nix environments could work, with some tweaks.</p>
 
-			<h2>Toolchain</h2>
-			<table border="1">
-				<tr>
-					<td><strong>Language</strong></td>
-					<td>C (Standard: C11)</td>
-				</tr>
-				<tr>
-					<td><strong>Compiler</strong></td>
-					<td>GCC 15.2.0+</td>
-				</tr>
-				<tr>
-					<td><strong>Build System</strong></td>
-					<td>GNU Make 4.4.1+</td>
-				</tr>
-				<tr>
-					<td><strong>Target OS</strong></td>
-					<td>Linux (Native or WSL2)</td>
-				</tr>
-				<tr>
-					<td><strong>Dependencies</strong></td>
-					<td>X11 Development Headers (<code>libx11-dev</code>)</td>
-				</tr>
-			</table>
-			<p>The versions shown above are taken from my current setup. They are not a strict minimum requirement. 
-				Older versions will most likely work too.</p>
+		<h2>1. Clone Repo</h2>
+		<pre><code>git clone https://github.com/senthilvsh/senthil-comp.git</code></pre>
 
-			<h2>Ubuntu/WSL2</h2>
-			<p>On Ubuntu based systems, run the command below to update packages, install the compiler toolchain, and fetch required graphics headers:</p>
-<pre><code># Install core toolchain and X11 development headers
-sudo apt update &amp;&amp; sudo apt install -y build-essential libx11-dev
-
-# Verify toolchain versions
-gcc --version &amp;&amp; make --version</code></pre>
-
+		<h2>2. Install Toolchain</h2>
+		<pre><code>sudo apt update &amp;&amp; sudo apt install -y build-essential libx11-dev</code></pre>
+		<p>...or follow equivalent steps for your environment</p>
 	</main>
 
 	<hr>
@@ -61,7 +35,6 @@ gcc --version &amp;&amp; make --version</code></pre>
 	<footer>
 		© 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
 	</footer>
-
 </body>
 
 </html>

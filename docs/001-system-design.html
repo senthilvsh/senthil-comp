@@ -17,50 +17,17 @@
 	<hr>
 
 	<main>
-		<h1>A 32-bit System Design</h1>
+		<h1>System Design</h1>
 		<p>
-			The initial system design will have the following characterestics.
-			It will be modified/expanded later as required by programming needs.
+			We could take the time to design the hardware and instruction set architecture
+			right now. But it would be more interesting to start with only a handful of
+			fundamental assumptions, a clean slate, and add features only as needed.
 		</p>
-
-		<h2>Registers</h2>
+		
 		<ul>
-			<li>32-bits wide</li>
-			<li>General purpose registers - R0 &amp; R1</li>
-			<li>Instruction Pointer</li>
-			<li>Flags Register</li>
+			<li>32-bits</li>
+			<li>Little Endian</li>
 		</ul>
-
-		<h2>Memory</h2>
-		<ul>
-			<li>32-bit address bus - can address 2^32 = 4,294,967,296 bytes (4 GB)</li>
-			<li>32-bit data bus - can fetch 4 bytes at once</li>
-		</ul>
-
-		<h2>Instructions</h2>
-		<ul>
-			<li>Variable length encoding</li>
-			<li>8-bit &amp; 32-bit data/operations</li>
-			<li>Signed &amp; Unsigned math</li>
-		</ul>
-
-		<h2>Others</h2>
-		<ul>
-			<li>Little Endian - lower bytes are stored first in memory</li>
-			<li>Memory-Mapped IO - for communicating with I/O devices</li>
-		</ul>
-
-		<h2>Architecture</h2>
-		<svg width="420" height="270">
-			<rect x="10" y="10" width="100" height="100" stroke="black" stroke-width="2" fill="none"></rect>
-			<text x="60" y="60" font-size="16" fill="black" text-anchor="middle" dominant-baseline="central">CPU</text>
-			<rect x="160" y="10" width="100" height="100" stroke="black" stroke-width="2" fill="none"></rect>
-			<text x="210" y="60" font-size="16" fill="black" text-anchor="middle" dominant-baseline="central">MMU</text>
-			<rect x="310" y="10" width="100" height="100" stroke="black" stroke-width="2" fill="none"></rect>
-			<text x="360" y="60" font-size="16" fill="black" text-anchor="middle" dominant-baseline="central">Memory</text>
-			<rect x="160" y="160" width="100" height="100" stroke="black" stroke-width="2" fill="none"></rect>
-			<text x="210" y="210" font-size="16" fill="black" text-anchor="middle" dominant-baseline="central">I/O Devices</text>
-		</svg>
 	</main>
 
 	<hr>

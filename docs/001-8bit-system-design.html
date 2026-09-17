@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Senthil-VM</title>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body>
+	<header>
+		<strong>Senthil-VM</strong>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="source.html">GitHub</a>
+		</nav>
+	</header>
+
+	<hr>
+
+	<main>
+		<h1>An 8-bit System Design</h1>
+		<p>
+			Let us kick off this project by designing a minimal 8-bit system. We will describe
+			the hardware components, the runtime behaviour and instructions.
+		</p>
+		<h2>Hardware</h2>
+		<ul>
+			<li>
+				<strong>Registers</strong> - There are two general purpose registers R0 &amp; R1
+				and an Instruction Pointer IP. All these registers are 8 bits wide.
+			</li>
+			<li>
+				<strong>Memory</strong> - An 8-bit address bus provides 2^8 = 256 bytes of address space.
+				An 8-bit data bus allows reading/writing 8 bits at a time.
+			</li>
+			<li>
+				<strong>Execution</strong> - On startup, the CPU starts execution from location 
+				<code>0x00</code> in memory - the <em>Reset Vector</em>.
+			</li>
+		</ul>
+		<h2>Instruction Set Architecture</h2>
+		<p>
+			Instructions have two parts - opcode and arguments. The opcode uniquely identifies the
+			instruction among other instructions and its own variants. The arguments provide additional
+			information to the CPU for execution.
+		</p>
+		<ul>
+			<li>An instruction can have zero or more arguments.</li>
+			<li>The first byte contains the opcode of the instruction.</li>
+			<li>Subsequent bytes are optionally taken up by arguments.</li>
+		</ul>
+
+		<p class="note"><em>
+			You might notice that a lot of important things are missing here—addressing modes,
+			I/O devices, interrupts, and so on. This is a deliberate choice. I want to start with a 
+			minimal design first, and expand it only based on actual programming needs. This way, 
+			we can learn why each feature is needed and what problem it solves.</em>
+		</p>
+	</main>
+
+	<hr>
+
+	<footer>
+		© 2026 <a href="https://github.com/senthilvsh">Senthil Kumar</a>
+	</footer>
+</body>
+
+</html>
